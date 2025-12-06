@@ -93,7 +93,7 @@ if __name__ == "__main__":
     # Write to BigQuery
     enriched_df.write.format("bigquery") \
         .option("table", BQ_TRANSACTIONS_TABLE) \
-        .option("temporaryGcsBucket", "bq-temp-gds") \
+        .option("temporaryGcsBucket", "bq-temp-gds-1") \
         .option("createDisposition", "CREATE_IF_NEEDED") \
         .option("writeDisposition", "WRITE_APPEND") \
         .save()
