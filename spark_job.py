@@ -96,6 +96,7 @@ if __name__ == "__main__":
         .option("temporaryGcsBucket", "bq-temp-gds-1") \
         .option("createDisposition", "CREATE_IF_NEEDED") \
         .option("writeDisposition", "WRITE_APPEND") \
+        .mode("append") \
         .save()
 
     print("Advanced Transactions Processing Completed!")
