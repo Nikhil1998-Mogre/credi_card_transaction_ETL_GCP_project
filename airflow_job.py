@@ -53,8 +53,8 @@ with DAG(
         "environment_config": {
             "execution_config": {
                 "service_account": "77253674768-compute@developer.gserviceaccount.com",
-                "network_uri": "projects/project-1-Dec/global/networks/default",
-                "subnetwork_uri": "projects/project-1-Dec/regions/us-central1/subnetworks/default",
+                "network_uri": "projects/acoustic-fusion-480217-b1/global/networks/default",
+                "subnetwork_uri": "projects/acoustic-fusion-480217-b1/regions/us-central1/subnetworks/default",
             }
         },
     }
@@ -63,7 +63,7 @@ with DAG(
         task_id="run_credit_card_processing_job",
         batch=batch_details,
         batch_id=batch_id,
-        project_id="project-1-Dec",
+        project_id="acoustic-fusion-480217-b1",
         region="us-central1",
         gcp_conn_id="google_cloud_default",
     )
