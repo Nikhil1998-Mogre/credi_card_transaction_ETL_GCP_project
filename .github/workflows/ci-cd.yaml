@@ -59,3 +59,5 @@ jobs:
             --environment airflow-gds \
             --location us-central1 \
             --source airflow_job.py
+
+            #
