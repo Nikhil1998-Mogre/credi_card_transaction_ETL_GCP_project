@@ -24,7 +24,7 @@ with DAG(
 ) as dag:
 
     # Define GCS Bucket & File Pattern
-    gcs_bucket = "credit-card-data-analysis-gds"
+    gcs_bucket = "credit-card-data-analysis-gds-1"
     file_pattern = "transactions/transactions_"
     source_prefix = "transactions/"
     archive_prefix = "archive/"
@@ -45,16 +45,16 @@ with DAG(
     # Task 2: Submit PySpark job to Dataproc Serverless
     batch_details = {
         "pyspark_batch": {
-            "main_python_file_uri": f"gs://credit-card-data-analysis-gds/spark_job/spark_job.py"
+            "main_python_file_uri": f"gs://credit-card-data-analysis-gds-1/spark_job/spark_job.py"
         },
         "runtime_config": {
             "version": "2.2",
         },
         "environment_config": {
             "execution_config": {
-                "service_account": "715970340101-compute@developer.gserviceaccount.com",
-                "network_uri": "projects/mythic-aloe-457912-d5/global/networks/default",
-                "subnetwork_uri": "projects/mythic-aloe-457912-d5/regions/us-central1/subnetworks/default",
+                "service_account": "77253674768-compute@developer.gserviceaccount.com",
+                "network_uri": "projects/project-1-Dec/global/networks/default",
+                "subnetwork_uri": "projects/project-1-Dec/regions/us-central1/subnetworks/default",
             }
         },
     }
@@ -63,7 +63,7 @@ with DAG(
         task_id="run_credit_card_processing_job",
         batch=batch_details,
         batch_id=batch_id,
-        project_id="mythic-aloe-457912-d5",
+        project_id="project-1-Dec",
         region="us-central1",
         gcp_conn_id="google_cloud_default",
     )

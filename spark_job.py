@@ -75,8 +75,8 @@ if __name__ == "__main__":
         .getOrCreate()
 
     # Paths and BigQuery tables
-    json_file_path = sys.argv[1] if len(sys.argv) > 1 else 'gs://credit-card-data-analysis-gds/transactions/transactions_*.json'
-    BQ_PROJECT_ID = "mythic-aloe-457912-d5"
+    json_file_path = sys.argv[1] if len(sys.argv) > 1 else 'gs://credit-card-data-analysis-gds-1/transactions/transactions_*.json'
+    BQ_PROJECT_ID = "project-1-Dec"
     BQ_DATASET = "credit_card"
     BQ_CARDHOLDERS_TABLE = f"{BQ_PROJECT_ID}.{BQ_DATASET}.cardholders_tb"
     BQ_TRANSACTIONS_TABLE = f"{BQ_PROJECT_ID}.{BQ_DATASET}.transactions"
