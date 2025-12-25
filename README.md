@@ -12,3 +12,25 @@ The Spark job validates and enriches transaction data, categorizes transactions,
 updates customer reward points, and stores the final analytics-ready data in BigQuery. Processed files are safely archived to prevent reprocessing. 
 The project follows enterprise best practices by including unit tests with PyTest to validate business logic 
 and a CI/CD pipeline to automatically run tests and enforce code quality on every change.
+
+Project Execution Steps (High Level)
+
+1. Transaction File Arrival
+
+2. GCS File Detection via Airflow
+
+3. Automatic Pipeline Trigger
+
+4. Dataproc Serverless Job Execution
+
+5. Data Validation
+
+6. Business Transformations
+
+7. Data Enrichment
+
+8. Load to BigQuery
+
+9. Archive Processed Files
+
+10. Testing and CI/CD Quality Checks
